@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="description" content="">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>DNS查询 :: Engine GO</title>
+
+    
+    <link href="/css/nucleus.css?1565662286" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1565662286" rel="stylesheet">
+    <link href="/css/hybrid.css?1565662286" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1565662286" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1565662286" rel="stylesheet">
+    <link href="/css/auto-complete.css?1565662286" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1565662286" rel="stylesheet">
+    <link href="/css/theme.css?1565662286" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1565662286" rel="stylesheet">
+    
+      <link href="/css/theme-blue.css?1565662286" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1565662286"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    <style type="text/css">
+  * {
+    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+  }
+
+  body {
+    font-weight: 400;
+  }
+
+  blockquote p {
+    font-size: 0.9rem;
+  }
+</style>
+
+  </head>
+  <body class="" data-url="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <h2 style="color: white !important;">EngineGo</h2>
+      <h5 style="color: white !important;">编程超能力入门班</h5>
+    </div>
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%BA%8F%E7%AB%A0/" title="序章" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%BA%8F%E7%AB%A0/">
+          序章
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="环境搭建" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+          <b>1. </b>环境搭建
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/" title="安装 Python" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/">
+          <b>1.1 </b>安装 Python
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows-%E5%AE%89%E8%A3%85-python/" title="Windows 安装 Python" class="dd-item ">
+        <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/windows-%E5%AE%89%E8%A3%85-python/">
+        Windows 安装 Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos-%E5%AE%89%E8%A3%85-python/" title="macOS 安装 Python" class="dd-item ">
+        <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85python/macos-%E5%AE%89%E8%A3%85-python/">
+        macOS 安装 Python
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="安装 Atom 编辑器" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/">
+          <b>1.2 </b>安装 Atom 编辑器
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="Windows 安装编辑器" class="dd-item ">
+        <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/windows-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/">
+        Windows 安装编辑器
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/" title="macOS 安装编辑器" class="dd-item ">
+        <a href="/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/macos-%E5%AE%89%E8%A3%85%E7%BC%96%E8%BE%91%E5%99%A8/">
+        macOS 安装编辑器
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/" title="基础知识" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/">
+          <b>2. </b>基础知识
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/" title="编程的第一步" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/">
+          <b>2.1 </b>编程的第一步
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/" title="Python 是如何运行的（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/python%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8C%E7%9A%84/">
+        Python 是如何运行的（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/" title="什么是编程（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E7%9A%84%E7%AC%AC%E4%B8%80%E6%AD%A5/%E4%BB%80%E4%B9%88%E6%98%AF%E7%BC%96%E7%A8%8B/">
+        什么是编程（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/" title="常见问题" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/">
+          <b>2.2 </b>常见问题
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/" title="一文理解字符串编码" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E4%B8%80%E6%96%87%E7%90%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81/">
+        一文理解字符串编码
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/" title="公私钥加密" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%85%AC%E7%A7%81%E9%92%A5%E5%8A%A0%E5%AF%86/">
+        公私钥加密
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/" title="如何准备技术面试" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E9%9D%A2%E8%AF%95%E5%87%86%E5%A4%87/">
+        如何准备技术面试
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/" title="如何写一份更好的简历" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%A6%82%E4%BD%95%E5%86%99%E4%B8%80%E4%BB%BD%E6%9B%B4%E5%A5%BD%E7%9A%84%E7%AE%80%E5%8E%86/">
+        如何写一份更好的简历
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95-101/" title="系统设计面试 101" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%9D%A2%E8%AF%95-101/">
+        系统设计面试 101
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%9B%BD%E5%A4%96%E6%B1%82%E8%81%8C%E6%8C%87%E5%8D%97/" title="程序员国外求职指南" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%9B%BD%E5%A4%96%E6%B1%82%E8%81%8C%E6%8C%87%E5%8D%97/">
+        程序员国外求职指南
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%8A%B3%E5%8A%A8%E6%B3%95%E8%B5%94%E5%81%BF101/" title="劳动法赔偿 101" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E5%8A%B3%E5%8A%A8%E6%B3%95%E8%B5%94%E5%81%BF101/">
+        劳动法赔偿 101
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E6%88%91%E4%BB%AC%E5%8F%AA%E8%BF%BD%E9%80%90%E8%B1%AA%E9%97%A8%E8%AF%91/" title="我们只追逐豪门（译）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E6%88%91%E4%BB%AC%E5%8F%AA%E8%BF%BD%E9%80%90%E8%B1%AA%E9%97%A8%E8%AF%91/">
+        我们只追逐豪门（译）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9%E6%9C%AA%E5%AE%8C%E6%88%90/" title="编程语言选择（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E9%80%89%E6%8B%A9%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        编程语言选择（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/">
+          <b>2.3 </b>术语
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/" title="DNS查询" class="dd-item active">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/dns%E6%9F%A5%E8%AF%A2/">
+        DNS查询
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/" title="终端" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/">
+        终端
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/" title="Ping命令" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/ping%E5%91%BD%E4%BB%A4/">
+        Ping命令
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%8D%8F%E8%AE%AE/" title="协议" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%8D%8F%E8%AE%AE/">
+        协议
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%B7%AF%E5%BE%84/" title="路径" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%B7%AF%E5%BE%84/">
+        路径
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/" title="hook（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/hook/">
+        hook（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/" title="内存（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%86%85%E5%AD%98/">
+        内存（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/" title="堆栈（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%A0%86%E6%A0%88/">
+        堆栈（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/" title="嵌套字（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%B5%8C%E5%A5%97%E5%AD%97/">
+        嵌套字（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/" title="抓包（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%8A%93%E5%8C%85/">
+        抓包（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" title="操作系统（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+        操作系统（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="环境变量（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">
+        环境变量（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/" title="进程（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E8%BF%9B%E7%A8%8B/">
+        进程（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/" title="域名" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E5%9F%9F%E5%90%8D/">
+        域名
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/" title="服务端" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E6%9C%8D%E5%8A%A1%E7%AB%AF/">
+        服务端
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/" title="爬虫基础" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/">
+          <b>2.4 </b>爬虫基础
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/" title="Python爬虫基础（未完成）" class="dd-item ">
+        <a href="/%E5%9F%BA%E7%A1%80/%E7%88%AC%E8%99%AB/%E7%88%AC%E8%99%AB%E5%9F%BA%E7%A1%80/">
+        Python爬虫基础（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="数据分析" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+          <b>3. </b>数据分析
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/" title="App Store 无用评价过滤" class="dd-item ">
+        <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/app-store-%E8%AF%84%E4%BB%B7%E8%BF%87%E6%BB%A4%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        App Store 无用评价过滤
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%BE%AE%E5%8D%9A%E6%8A%BD%E5%A5%96%E5%88%B0%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/" title="微博抽奖到数据分析" class="dd-item ">
+        <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E5%BE%AE%E5%8D%9A%E6%8A%BD%E5%A5%96%E5%88%B0%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">
+        微博抽奖到数据分析
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/" title="理解贝叶斯分类" class="dd-item ">
+        <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E7%90%86%E8%A7%A3%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/">
+        理解贝叶斯分类
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A%E6%9C%AA%E5%AE%8C%E6%88%90/" title="" class="dd-item ">
+        <a href="/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E5%BA%94%E8%AF%A5%E8%B5%8C%E5%8D%9A%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%AE%97%E6%B3%95/" title="算法" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%AE%97%E6%B3%95/">
+          <b>4. </b>算法
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+    <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/" title="Leetcode 算法" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/%E7%AE%97%E6%B3%95/leetcode/">
+          <b>1. </b>Leetcode 算法
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8A/" title="DFS 解题模式（上）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8A/">
+        DFS 解题模式（上）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9C%AA%E5%AE%8C%E6%88%90/" title="DFS 解题模式（下）（未完成）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/dfs-%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%9C%AA%E5%AE%8C%E6%88%90/">
+        DFS 解题模式（下）（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="二分查找解题模式" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
+        二分查找解题模式
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/%E7%AE%97%E6%B3%95/leetcode/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/" title="单调队列解题模式（未完成）" class="dd-item ">
+        <a href="/%E7%AE%97%E6%B3%95/leetcode/%E5%8D%95%E8%B0%83%E9%98%9F%E5%88%97%E8%A7%A3%E9%A2%98%E6%A8%A1%E5%BC%8F/">
+        单调队列解题模式（未完成）
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Star on <a href="https://github.com/EngineGirl/enginegirl.github.io"/>GitHub</a></p>
+<p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fa fa-heart"></i></a> from <a href="https://github.com/Windsooon">Windson</a>, <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>编程超能力入门班</a> > <a href='/%E5%9F%BA%E7%A1%80/'>基础知识</a> > <a href='/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/'>术语</a> > DNS查询
+          
+         
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#dns-查询">DNS 查询</a></li>
+<li><a href="#使用域名的优点">使用域名的优点</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+             <h1>DNS查询</h1>
+             <h5>作者：Windson Yang</h5>
+             <h5>更新时间：November 11, 2018</h5>
+             <h5>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明 www.enginego.org。</h5>
+             <hr>
+          
+
+        
+
+
+
+
+
+<p>当你在浏览器输入 www.apple.com。按下回车之后，浏览器跳到苹果的官网，把 iPhone 的介绍和图片显示出来。浏览器是如何通过这个域名找到 iPhone 的内容并且正确显示呢？第一步就要经过 <strong>DNS 查询</strong>。</p>
+
+<p><img src="https://raw.githubusercontent.com/EngineGirl/enginegirl.github.io/markdown/images/browser.png" alt="域名browser" /></p>
+
+<h4 id="dns-查询">DNS 查询</h4>
+
+<p>DNS 查询其实很好理解，生活上比较贴近的例子就是通讯录，我们通常能够记住自己的电话号码，不过要找其他人的电话，一般都需要通过通讯录。我们输入朋友的名字，通讯录就会找到对应的电话号码。在这里，通讯录担任了把难记的电话号码转成好记的人名的工作。DNS查询其实也一样，负责把难记的 IP 地址转成容易记忆的域名。</p>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/dns/dns_convert.png" alt="dns_convert" /></p>
+
+<p>互联网刚开始发展的时候，联网的电脑加起来才几千台（没错～）。每台电脑都需要保存一个文件（称为 <strong>hosts 文件</strong>）用作记录域名对应哪个IP地址（就像通讯录记录人名对应哪个电话号码）。</p>
+
+<pre><code>www.enginego.org 104.24.120.11（每一行分别对应着域名和 IP 地址）
+www.apple.com 119.145.144.223
+www.ieee.org  23.38.177.118
+</code></pre>
+
+<p>所以早期的时候，当我们在浏览器输入域名的时候，浏览器会先查询 hosts 文件，找到该域名对应的 IP 地址。然后再通过 IP 地址获取到服务器里面的内容并且显示在浏览器中。不过问题随着互联网的发展慢慢显现了：</p>
+
+<ol>
+<li>每个小时都有新的域名被注册，新的主机加入互联网，现在已经超过 10亿 台设备接入互联网，如果每次查询的话都要从文件中找到对应的 IP 地址，那么会非常耗时，而且 hosts 文件也会变得非常大。</li>
+<li>大部分的网站用户根本不会浏览，每上线一个小网站就要求全球的电脑都更新 hosts 文件这样显然小题大做了。</li>
+</ol>
+
+<p>为了解决这几个问题，现代的 DNS 查询会按顺序经过 3个 步骤，一旦查询到结果，就会跳过剩下的步骤：</p>
+
+<ol>
+<li><p>先查询浏览器有没有保留缓存</p>
+
+<p>如果你之前访问过这个网站，那么浏览器会保存网站对应的 IP 地址，这样下一次访问就能直接从缓存中取出地址，减少查询 IP 地址的时间。</p></li>
+</ol>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/dns/browser_cache.png" alt="browser_cache" /></p>
+
+<ol>
+<li><p>查询本地的hosts文件</p>
+
+<p>如果hosts文件有对应域名包含的 IP 地址，例如</p>
+
+<pre><code>www.apple.com 119.145.144.223
+</code></pre>
+
+<p>那么计算机就会直接使用这个 IP 地址，你可以查看自己电脑的 hosts 文件，不同系统分别存储在不同的位置</p>
+
+<pre><code>Windows
+c:\windows\system32\drivers\etc\hosts
+
+macOS
+/etc/hosts
+</code></pre></li>
+</ol>
+
+<p><img src="https://coding.net/u/WindsonYang/p/WindsonYang.coding.me/git/raw/markdown/images/base/dns/root.png" alt="hosts_file" /></p>
+
+<ol>
+<li><p>DNS 服务器查询</p>
+
+<p>当计算机在前两个方法都没有找到对应的IP地址，就会进行DNS服务器查询，<strong>它会询问最近的子域名服务器该域名对应的 IP 地址</strong>（默认是 ISP 运营商提供，在国内就是中国电信，中国联通，中国移动这几家），<strong>如果最近的子域名服务器也不知道的话会一级级向上查询，直到查询到根域名服务器。</strong>  （根域名服务器保存着所有域名与 IP 地址的对应关系，子域名服务器也会定时从上级服务器中获取最新的内容。）</p></li>
+</ol>
+
+<p>经过这 3步，我们只需要记住某个网站的域名，就能获取到该网站的IP地址了。</p>
+
+<h4 id="使用域名的优点">使用域名的优点</h4>
+
+<ol>
+<li><p>容易记忆</p>
+
+<p>计算机比较擅长处理数字，但是人类就差多了，访问苹果官网要背那么多数字显然不现实。使用域名就像我们使用手机的通讯录一样，我们会为常用的电话号码添加联系人姓名，打电话的时候直接输入名字就可以拨打，不需要背电话号码。</p></li>
+
+<li><p>容易扩展</p>
+
+<p>早期的计算机和IP地址是一一对应的关系，但是一台计算机的性能并不能承受大量用户的请求。而一个域名可以背后可以对应多个 IP 地址。通过给不同地区的用户分配不同的 IP 地址，公司就能使用多台服务器来提供服务了。</p></li>
+
+<li><p>层级关系</p>
+
+<p>从域名上我们可以判断 apple.com 与 edu.apple.com 都是属于 apple 公司的，这种子域名的层级关系也能有效提高用户的安全性。</p></li>
+</ol>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/" title="术语"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/%E5%9F%BA%E7%A1%80/%E6%9C%AF%E8%AF%AD/%E7%BB%88%E7%AB%AF/" title="终端" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1565662286"></script>
+    <script src="/js/perfect-scrollbar.min.js?1565662286"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1565662286"></script>
+    <script src="/js/jquery.sticky.js?1565662286"></script>
+    <script src="/js/featherlight.min.js?1565662286"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1565662286"></script>
+    <script src="/js/highlight.pack.js?1565662286"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1565662286"></script>
+    <script src="/js/learn.js?1565662286"></script>
+    <script src="/js/hugo-learn.js?1565662286"></script>
+
+    <link href="/mermaid/mermaid.css?1565662286" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1565662286"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+
